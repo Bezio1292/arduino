@@ -1,0 +1,28 @@
+.fa-effect-strike{
+    position: relative;
+}
+.fa-effect-strike::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:50%;
+    background-color: red;
+    width: 100%;
+    height: 15%;
+    transform: rotate(-15deg);     
+}
+.item{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.primary-color-style{
+    background-color: #008184;
+    background: #008184;
+    color:white;
+}
+.primary-darker-color-style{
+    background-color: #005f61;
+    background: #005f61;
+    color:white;
+}

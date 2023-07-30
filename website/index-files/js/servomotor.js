@@ -2,6 +2,7 @@ var slider = $("#servomotorSlider");
 var durationInput = $("#durationInput");
 var servomotor = $("#servomotor");
 var stepsList = $("#stepsList");
+var stepDegree = $("#stepDegree");
 
 var promiseInProgress = false;
 
@@ -12,6 +13,7 @@ slider.on("input", function () {
         '-moz-transform': 'rotate(' + slider.val() + 'deg)',
         'transform': 'rotate(' + slider.val() + 'deg)'
     });
+    stepDegree.text(slider.val() + "°");
 });
 
 $("#addStepBtn").on("click", function () {
@@ -20,6 +22,11 @@ $("#addStepBtn").on("click", function () {
 });
 $("#previewStepsBtn").on("click", function () {
     previewSteps();
+});
+
+$("#clearStepsBtn").on("click", function () {
+    steps = [];
+    stepsList.empty();
 });
 
 var steps = new Array();
@@ -62,6 +69,7 @@ function previewSteps() {
                     '-moz-transform': 'rotate(' + step.pos + 'deg)',
                     'transform': 'rotate(' + step.pos + 'deg)'
                 });
+                stepDegree.text(step.pos + "°");
             });
 
         });

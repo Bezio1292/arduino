@@ -28,7 +28,7 @@
         <div class="row ">
             <h1 class="fw-bold"><i class="fa-solid fa-circle-info m-1"> </i>Przesyłane dane</h1>
 
-            <div class="col-12 col-md-6  p-3">
+            <div class="col-12 col-md-6 p-3">
                 <div class="item primary-color-style h-100">
                     <div class="row p-2 primary-darker-color-style">
                         <div class="col-11 fs-2" id="data-name">
@@ -90,18 +90,36 @@
                             <i class="fa-solid fa-signal"></i>
                         </div>
                     </div>
-                    <div class="row p-2 justify-content-center">
-                        <div id="servomotor-container" class="col-12 col-md-5">
-                            <div id="servomotor"></div>
-                        </div>
-                        <div class="slidecontainer">
-                            <input type="range" min="0" max="180" value="0" class="slider" id="servomotorSlider">
-                        </div>
-                        <div>
-                            Czas wykonywania:
-                            <input id="durationInput" type="number" />
-                            <button id="addStepBtn">Dodaj krok</button>
-                            <button id="previewStepsBtn">Podgląd</button>
+                    
+                    <div class="row p-2 justify-content-center mb-5">
+                        <div class="col-10 ">
+                            <div class="row justify-content-center">
+                                <div id="servomotor-container" class="col-12 col-md-5 ">
+                                    <div id="servomotor"></div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="slidecontainer">
+                                    <input type="range" min="0" max="180" value="0" class="slider" id="servomotorSlider">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <span class="col-8 col-md-4">
+                                    Czas wykonywania <input id="durationInput" type="number" />
+                                </span>
+                                <button id="addStepBtn" class="col-3 col-md-2 ">Dodaj krok</button>
+                            </div>
+                            <div class="row justify-content-between mt-5">
+                                <div class="col-4">Lista kroków:</div>
+                                <button id="clearStepsBtn" class="col-4">Wyczyść</button>
+                            </div>
+                            <div class="row justify-content-between">
+                                <ol id="stepsList">
+                                </ol>
+                            </div>
+                            <div class="row justify-content-end">
+                                <button class="col-3" id="previewStepsBtn">Podgląd</button>
+                            </div>
                         </div>
 
                     </div>

@@ -77,6 +77,28 @@
   justify-content: center;
   height: 150px;
 }
+#servomotor-container::before{
+  content: "";
+  width: 60%;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  bottom: -6px;
+  border-radius: 10px;
+}
+#servomotor-container::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+  border-width: 2px;
+  border-style: solid;
+  border-color: aquamarine;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 10px;
+}
+
 
 #servomotor {
   position: absolute;
@@ -86,5 +108,5 @@
   width: 25%;
   height: 20px;
   background-color: aqua;
-  border-radius: 20px;
+  border-radius: 15px 10px 10px 15px;
 }

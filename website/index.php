@@ -90,9 +90,12 @@
                             <i class="fa-solid fa-signal"></i>
                         </div>
                     </div>
-                    
+
                     <div class="row p-2 justify-content-center mb-5">
                         <div class="col-10 ">
+                            <div class="row justify-content-center">
+                                    <span id="stepDegree" class="col-12 text-center">0°</span>
+                            </div>
                             <div class="row justify-content-center">
                                 <div id="servomotor-container" class="col-12 col-md-5 ">
                                     <div id="servomotor"></div>
@@ -103,22 +106,24 @@
                                     <input type="range" min="0" max="180" value="0" class="slider" id="servomotorSlider">
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center mt-2">
                                 <span class="col-8 col-md-4">
-                                    Czas wykonywania <input id="durationInput" type="number" />
+                                    Czas wykonywania <input id="durationInput" type="number" class="form-control" />
                                 </span>
-                                <button id="addStepBtn" class="col-3 col-md-2 ">Dodaj krok</button>
+                                <button id="addStepBtn" class="col-3 col-md-2 btn btn-info">Dodaj krok</button>
                             </div>
                             <div class="row justify-content-between mt-5">
-                                <div class="col-4">Lista kroków:</div>
-                                <button id="clearStepsBtn" class="col-4">Wyczyść</button>
+                                <div class="col-4">
+                                    <h2>Lista kroków:</h2>
+                                </div>
+                                <button id="clearStepsBtn" class="col-4 btn btn-info">Wyczyść</button>
                             </div>
                             <div class="row justify-content-between">
                                 <ol id="stepsList">
                                 </ol>
                             </div>
                             <div class="row justify-content-end">
-                                <button class="col-3" id="previewStepsBtn">Podgląd</button>
+                                <button id="previewStepsBtn" class="col-3 btn btn-info">Podgląd</button>
                             </div>
                         </div>
 

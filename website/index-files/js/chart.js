@@ -1,4 +1,4 @@
-import CONFIG from '../../../config.json' assert {type: 'json'};
+import CONFIG from '../../../../config.json' assert {type: 'json'};
 var url = CONFIG.arduino.arduinoApiUrl;
 
 function fetchHistoryData(dataName, target) {

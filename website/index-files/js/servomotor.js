@@ -1,6 +1,8 @@
 var slider = $("#servomotorSlider");
 var durationInput = $("#durationInput");
 var servomotor = $("#servomotor");
+var stepsList = $("#stepsList");
+
 var promiseInProgress = false;
 
 slider.on("input", function () {
@@ -14,6 +16,7 @@ slider.on("input", function () {
 
 $("#addStepBtn").on("click", function () {
     addStep();
+    updateStepsList();
 });
 $("#previewStepsBtn").on("click", function () {
     previewSteps();
@@ -29,6 +32,16 @@ function addStep() {
         "pos": slider.val()
     });
     console.log(steps);
+}
+
+function updateStepsList(){
+    stepsList.empty();
+    steps.forEach(step => {
+        const li = document.createElement("li");
+        const node = document.createTextNode(step.pos+'° w '+ step.duration + "ms");
+        li.appendChild(node);
+        stepsList.append(li);
+    });
 }
 
 function previewSteps() {
